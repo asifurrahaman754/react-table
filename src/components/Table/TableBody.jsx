@@ -1,26 +1,14 @@
 import PropTypes from "prop-types";
 
 export default function TableBody({ tableData, config }) {
-  //find the property from the object with the column-string value
-  const findPropertyWithStr = (str, obj) => {
-    for (const key in obj) {
-      if (key === str) {
-        return key;
-      }
-    }
-  };
-
   return (
     <tbody>
       {tableData.map((row, i) => (
         <tr key={i}>
           {config.map(({ col_name }) => {
-            const matchedObjectKey = findPropertyWithStr(col_name, row);
-            if (
-              typeof row[matchedObjectKey] === "object" &&
-              matchedObjectKey === "person"
-            ) {
-              const { name, avatar } = row[matchedObjectKey];
+            const columnValue = row[col_name];
+            if (typeof columnValue === "object" && col_name === "person") {
+              const { name, avatar } = columnValue;
               return (
                 <td key={col_name}>
                   <img className="avatar" src={`/assets/img/${avatar}`} />
@@ -32,9 +20,9 @@ export default function TableBody({ tableData, config }) {
             return (
               <td
                 key={col_name}
-                className={matchedObjectKey === "email" ? "data-email" : null}
+                className={col_name === "email" ? "data-email" : null}
               >
-                {row[matchedObjectKey]}
+                {columnValue}
               </td>
             );
           })}
