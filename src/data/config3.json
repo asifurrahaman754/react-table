@@ -1,0 +1,22 @@
+[
+  {
+    "label": "name",
+    "col_name": "person",
+    "isSortable": false
+  },
+  {
+    "label": "city",
+    "col_name": "city",
+    "isSortable": true
+  },
+  {
+    "label": "joining date",
+    "col_name": "joiningDate",
+    "isSortable": false
+  },
+  {
+    "label": "role",
+    "col_name": "role",
+    "isSortable": true
+  }
+]

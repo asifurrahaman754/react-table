@@ -1,0 +1,17 @@
+[
+  {
+    "label": "name",
+    "col_name": "person",
+    "isSortable": true
+  },
+  {
+    "label": "email address",
+    "col_name": "email",
+    "isSortable": false
+  },
+  {
+    "label": "role",
+    "col_name": "role",
+    "isSortable": false
+  }
+]

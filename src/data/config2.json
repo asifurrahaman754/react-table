@@ -1,0 +1,17 @@
+[
+  {
+    "label": "email address",
+    "col_name": "email",
+    "isSortable": false
+  },
+  {
+    "label": "joining date",
+    "col_name": "joiningDate",
+    "isSortable": true
+  },
+  {
+    "label": "role",
+    "col_name": "role",
+    "isSortable": true
+  }
+]
